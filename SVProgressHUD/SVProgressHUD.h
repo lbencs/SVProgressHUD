@@ -107,6 +107,7 @@ typedef void (^SVProgressHUDDismissCompletion)(void);
 #pragma mark - Show Methods
 
 + (void)show;
++ (void)show:(nullable NSString *)text;
 + (void)showWithMaskType:(SVProgressHUDMaskType)maskType __attribute__((deprecated("Use show and setDefaultMaskType: instead.")));
 + (void)showWithStatus:(nullable NSString*)status;
 + (void)showWithStatus:(nullable NSString*)status maskType:(SVProgressHUDMaskType)maskType __attribute__((deprecated("Use showWithStatus: and setDefaultMaskType: instead.")));
