@@ -208,7 +208,10 @@ static const CGFloat SVProgressHUDLabelSpacing = 8.0f;
     [self show];
     [self setDefaultMaskType:existingMaskType];
 }
-
++ (void)showText:(NSString *)status {
+    NSTimeInterval displayInterval = [self displayDurationForString:status];
+    [[self sharedView] showImage:nil status:status duration:displayInterval];
+}
 + (void)showWithStatus:(NSString*)status {
     [self showProgress:SVProgressHUDUndefinedProgress status:status];
 }
